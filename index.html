@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offline E-Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🗳 Offline E-Voting System</h1>
+
+    <!-- Voter Login -->
+    <div id="loginBox">
+        <h2>Voter Verification</h2>
+        <input type="text" id="voterId" placeholder="Enter Voter ID">
+        <button onclick="verifyVoter()">Verify</button>
+        <p id="loginMsg"></p>
+    </div>
+
+    <!-- Voting Panel -->
+    <div id="voteBox" class="hidden">
+        <h2>Cast Your Vote</h2>
+
+        <button onclick="castVote('Candidate A')">Candidate A</button>
+        <button onclick="castVote('Candidate B')">Candidate B</button>
+        <button onclick="castVote('Candidate C')">Candidate C</button>
+
+        <p id="voteMsg"></p>
+    </div>
+
+    <!-- Results -->
+    <div class="resultBox">
+        <h2>Live Results</h2>
+
+        <div class="result">
+            Candidate A
+            <div class="bar"><span id="barA"></span></div>
+        </div>
+
+        <div class="result">
+            Candidate B
+            <div class="bar"><span id="barB"></span></div>
+        </div>
+
+        <div class="result">
+            Candidate C
+            <div class="bar"><span id="barC"></span></div>
+        </div>
+
+        <button class="reset" onclick="resetSystem()">Reset Election</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
